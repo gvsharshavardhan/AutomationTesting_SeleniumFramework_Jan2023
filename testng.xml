@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Green kart suite">
+    <test name="End to end">
+        <classes>
+            <class name="GreenKartTests.EndToEndTests">
+            </class>
+        </classes>
+    </test>
+    <test name="Unit tests">
+        <classes>
+            <class name="GreenKartTests.HomePageTest"></class>
+        </classes>
+    </test>
+</suite>

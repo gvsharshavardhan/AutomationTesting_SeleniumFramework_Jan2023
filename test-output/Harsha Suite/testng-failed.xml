@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Harsha Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="regression(failed)">
+    <classes>
+      <class name="TestngTests.MicrosoftTests">
+        <methods>
+          <include name="microTest1"/>
+        </methods>
+      </class> <!-- TestngTests.MicrosoftTests -->
+      <class name="TestngTests.AmazonTests">
+        <methods>
+          <include name="amazonTest2"/>
+          <include name="amazonTest3"/>
+        </methods>
+      </class> <!-- TestngTests.AmazonTests -->
+      <class name="TestngTests.GoogleTests">
+        <methods>
+          <include name="googleTest3"/>
+        </methods>
+      </class> <!-- TestngTests.GoogleTests -->
+    </classes>
+  </test> <!-- regression(failed) -->
+</suite> <!-- Failed suite [Harsha Suite] -->

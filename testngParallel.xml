@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Harsha Suite">
+
+    <test name="smoke">
+        <classes>
+
+            <class name="TestngTests.DataProviderDemoTest">
+                <methods>
+                    <include name="Test1"></include>
+                </methods>
+            </class>
+
+        </classes>
+
+    </test>
+    <test name="smoke2">
+        <classes>
+
+            <class name="TestngTests.DataProviderDemoTest">
+                <methods>
+                    <include name="Test1"></include>
+                </methods>
+            </class>
+
+        </classes>
+
+    </test>
+    <test name="smoke3">
+        <classes>
+
+            <class name="TestngTests.DataProviderDemoTest">
+                <methods>
+                    <include name="Test1"></include>
+                </methods>
+            </class>
+
+        </classes>
+
+    </test>
+
+
+
+
+
+
+</suite>

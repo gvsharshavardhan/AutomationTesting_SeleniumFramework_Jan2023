@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Harsha Suite">
+
+    <test name="Harshsa test">
+
+
+        <classes>
+            <class name="TestngTests.TagsDemo">
+                <parameter name="browserName" value="chrome"></parameter>
+
+                <methods>
+                    <include name="m4"/>
+                </methods>
+
+            </class>
+
+            <class name="TestngTests.TagsDemo">
+                <parameter name="browserName" value="firefox"></parameter>
+
+                <methods>
+                    <include name="m4"/>
+                </methods>
+
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

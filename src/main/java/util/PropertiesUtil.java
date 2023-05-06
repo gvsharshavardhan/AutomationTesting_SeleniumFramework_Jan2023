@@ -38,5 +38,9 @@ public class PropertiesUtil {
         return Integer.parseInt(properties.getProperty("explicitTime", "4"));
     }
 
+    public static String getValueFromPropertyFile(String key){
+        return properties.getProperty(key);
+    }
+
 
 }

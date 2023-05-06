@@ -14,7 +14,7 @@ public class HomePageTest extends BaseTest {
         homePage.waitUntilBrocolliElementIsVisible();
 
         String actualTitle = homePage.getTitle();
-        String expectedTitle = "GreenKart - veg and fruits kart";
+        String expectedTitle = "GreenKart - veg and fruits kart123";
 
         Assert.assertEquals(actualTitle, expectedTitle, "Page Title is not as Expected!");
     }

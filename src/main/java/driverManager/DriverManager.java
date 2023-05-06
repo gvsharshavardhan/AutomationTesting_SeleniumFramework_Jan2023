@@ -6,6 +6,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import util.PropertiesUtil;
 
 public class DriverManager {
+
+    private static ThreadLocal<WebDriver> tl = new ThreadLocal<>();
     private static WebDriver driver;
 
     public static void InitiateDriver() {
@@ -15,15 +17,17 @@ public class DriverManager {
         } else {
             driver = new FirefoxDriver();
         }
-        driver.manage().window().maximize();
+
+        tl.set(driver);
+//        driver.manage().window().maximize();
     }
 
 
     public static WebDriver getDriver() {
-        return driver;
+        return tl.get();
     }
 
     public static void quitBrowser() {
-        driver.quit();
+        tl.get().quit();
     }
 }

@@ -3,46 +3,21 @@
 
 
 <suite name="Harsha Suite">
+    <listeners>
+        <listener class-name="listeners.FrameworkListener">
+        </listener>
+    </listeners>
 
-    <test name="smoke">
+    <test name="parallel test" parallel="methods" thread-count="2">
         <classes>
+            <class name="saucetests.SauceTestCases">
 
-            <class name="TestngTests.DataProviderDemoTest">
-                <methods>
-                    <include name="Test1"></include>
-                </methods>
             </class>
+            <class name="GreenKartTests.HomePageTest">
 
-        </classes>
-
-    </test>
-    <test name="smoke2">
-        <classes>
-
-            <class name="TestngTests.DataProviderDemoTest">
-                <methods>
-                    <include name="Test1"></include>
-                </methods>
             </class>
-
         </classes>
-
     </test>
-    <test name="smoke3">
-        <classes>
-
-            <class name="TestngTests.DataProviderDemoTest">
-                <methods>
-                    <include name="Test1"></include>
-                </methods>
-            </class>
-
-        </classes>
-
-    </test>
-
-
-
 
 
 

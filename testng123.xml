@@ -3,48 +3,18 @@
 
 
 <suite name="Harsha Suite">
+    <listeners>
+        <listener class-name="listeners.FrameworkListener">
+        </listener>
+    </listeners>
 
     <test name="smoke">
         <classes>
             <class name="TestngTests.AmazonTests">
-                <methods>
-                    <include name="amazonTest1"/>
-                </methods>
             </class>
             <class name="TestngTests.GoogleTests">
-                <methods>
-                    <include name="googleTest2"/>
-                </methods>
             </class>
             <class name="TestngTests.MicrosoftTests">
-                <methods>
-                    <include name="microTest3"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-
-
-
-    <test name="regression">
-        <classes>
-
-            <class name="TestngTests.MicrosoftTests">
-                <methods>
-                    <exclude name="microTest3"></exclude>
-                </methods>
-            </class>
-
-            <class name="TestngTests.GoogleTests">
-                <methods>
-                    <exclude name="googleTest2"></exclude>
-                </methods>
-            </class>
-
-            <class name="TestngTests.AmazonTests">
-                <methods>
-                    <exclude name="amazonTest1"></exclude>
-                </methods>
             </class>
         </classes>
     </test>

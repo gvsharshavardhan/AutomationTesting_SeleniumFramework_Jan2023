@@ -12,12 +12,12 @@ import static driverManager.DriverManager.getDriver;
 public class CheckoutPage extends BasePage {
 
     //locators
-    By enterPromoCodeFieldLocator = By.xpath("//input[@placeholder='Enter promo code']");
-    By applyButton = By.xpath("//button[@class='promoBtn']");
-    By placeOrderButton = By.xpath("//button[contains(.,'Place Order')]");
-    By promoInfo = By.xpath("//span[@class='promoInfo']");
-    By discountPercentage = By.xpath("//span[@class='discountPerc']");
-    By productsFromTable = By.xpath("//tbody//tr//td[2]/p");
+   private By enterPromoCodeFieldLocator = By.xpath("//input[@placeholder='Enter promo code']");
+   private By applyButton = By.xpath("//button[@class='promoBtn']");
+   private By placeOrderButton = By.xpath("//button[contains(.,'Place Order')]");
+   private By promoInfo = By.xpath("//span[@class='promoInfo']");
+   private By discountPercentage = By.xpath("//span[@class='discountPerc']");
+   private By productsFromTable = By.xpath("//tbody//tr//td[2]/p");
 
     //methods
     //          https://rahulshettyacademy.com/seleniumPractise/#/cart
@@ -53,6 +53,11 @@ public class CheckoutPage extends BasePage {
         return productsFromTable;
     }
 
+
+    /**
+     *
+     * @return
+     */
     public CountryPage placeOrder() {
         click(placeOrderButton);
         return new CountryPage();

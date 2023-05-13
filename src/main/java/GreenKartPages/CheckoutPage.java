@@ -1,7 +1,10 @@
 package GreenKartPages;
 
+import driverManager.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.ArrayList;
@@ -12,17 +15,28 @@ import static driverManager.DriverManager.getDriver;
 public class CheckoutPage extends BasePage {
 
     //locators
-   private By enterPromoCodeFieldLocator = By.xpath("//input[@placeholder='Enter promo code']");
-   private By applyButton = By.xpath("//button[@class='promoBtn']");
-   private By placeOrderButton = By.xpath("//button[contains(.,'Place Order')]");
-   private By promoInfo = By.xpath("//span[@class='promoInfo']");
-   private By discountPercentage = By.xpath("//span[@class='discountPerc']");
-   private By productsFromTable = By.xpath("//tbody//tr//td[2]/p");
+    private By enterPromoCodeFieldLocator = By.xpath("//input[@placeholder='Enter promo code']");
+    private By applyButton = By.xpath("//button[@class='promoBtn']");
+    private By placeOrderButton = By.xpath("//button[contains(.,'Place Order')]");
+    private By promoInfo = By.xpath("//span[@class='promoInfo']");
+    private By discountPercentage = By.xpath("//span[@class='discountPerc']");
+
+
+    @FindBy(xpath = "//tbody//tr//td[2]/p")
+    private WebElement abc;
+
+    private By productsFromTable = By.xpath("//tbody//tr//td[2]/p");
+
+    String xyz = "//abc//$$";
 
     //methods
     //          https://rahulshettyacademy.com/seleniumPractise/#/cart
     //String[] abc =  ["https://rahulshettyacademy", "com/seleniumPractise/#/cart"]
     //abc[0].split("//") -> ["https:","rahulshettyacademy"]
+
+    public void CheckoutPage(){
+        PageFactory.initElements(DriverManager.getDriver(), CheckoutPage.class);
+    }
 
 
     public String getUrl() {
@@ -30,7 +44,7 @@ public class CheckoutPage extends BasePage {
     }
 
     public String getPromoCodeFromURL() {
-        return getUrl().split(".com")[0].replace("https://","");
+        return getUrl().split(".com")[0].replace("https://", "");
     }
 
     public void verifyPromoCodeIsApplied() {
@@ -55,7 +69,6 @@ public class CheckoutPage extends BasePage {
 
 
     /**
-     *
      * @return
      */
     public CountryPage placeOrder() {
